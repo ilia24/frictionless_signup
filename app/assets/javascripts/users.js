@@ -19,8 +19,8 @@ $(document).on('turbolinks:load', function() {
       }).done(function(data){
         clearFields();
         $('#full_name').val(data.person.name.fullName);
-        $('#company_name').val(data.company.legalName);
         $('.hiddenfields').removeClass( 'hide' );
+        $('#company_name').val(data.company.legalName);
       }).fail(function(){
         clearFields();
         console.log('Person not found!');
