@@ -18,42 +18,46 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="large-4 columns">
-          <%= f.label :name %>
-          <%= f.text_field :full_name, :id => 'full_name' %>
-        </div>
-      </div>
+      <div class="hiddenfields hide">
 
-      <div class="row">
-        <div class="large-4 columns">
-          <%= f.label :company_name %>
-          <%= f.text_field :company_name, :id => 'company_name' %>
+        <div class="row">
+          <div class="large-4 columns">
+            <%= f.label :name %>
+            <%= f.text_field :full_name, :id => 'full_name' %>
+          </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="large-4 columns">
-          <%= f.label :company_size %>
-          <%= f.text_field :company_size %>
+        <div class="row">
+          <div class="large-4 columns">
+            <%= f.label :company_name %>
+            <%= f.text_field :company_name, :id => 'company_name' %>
+          </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="large-4 columns">
-          <%= f.label :phone_number %>
-          <%= f.text_field :phone_number %>
+        <div class="row">
+          <div class="large-4 columns">
+            <%= f.label :company_size %>
+            <%= f.text_field :company_size %>
+          </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="large-4 columns">
-          <%= f.label :password %>
-          <%= f.password_field :password %>
+        <div class="row">
+          <div class="large-4 columns">
+            <%= f.label :phone_number %>
+            <%= f.text_field :phone_number %>
+          </div>
         </div>
-      </div>
 
-        <%= f.submit(:class => "button round") %>
+        <div class="row">
+          <div class="large-4 columns">
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+          </div>
+        </div>
+
+          <%= f.submit(:class => "button round") %>
+
+      </div>
 
     <% end %>
   </div>
