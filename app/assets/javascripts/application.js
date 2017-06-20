@@ -12,5 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+
+//= require jquery.email-autocomplete
+//= require autocomplete-rails
 //= require turbolinks
 //= require_tree .
