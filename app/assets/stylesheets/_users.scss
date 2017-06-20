@@ -1,11 +1,44 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: rgb(232, 232, 232);
+}
 
-.form {
-  width: 30%;
-  margin: 0px auto;
+.title {
+  text-align: center;
+  color: rgb(34, 98, 152);
+  font-size: 21px;
+  font-weight: 600;
+  border-bottom: rgb(43, 120, 185);
+  border-bottom-style: solid;
+  border-width: 1px;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.title p{
+  margin-bottom: 1.7rem;
+}
+
+.form_container {
+  width: 45%;
+  margin: 30px auto;
+  background-color: rgb(243, 249, 254);
+  padding: 21px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(43, 120, 185);
 }
 .row {
+  margin-bottom: 27px;
+}
+.row input {
+  border-radius: 6px;
+}
 
+.row label {
+  margin-bottom: 8px;
+  color: rgb(34, 98, 152);
+  font-weight: 500;
 }
