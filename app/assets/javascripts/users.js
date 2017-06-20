@@ -5,7 +5,18 @@ $(document).on('turbolinks:load', function() {
   });
 
   $("#email").focusout(function() {
-    console.log('focus lost');
+    $.ajax({
+      method: 'GET',
+      // crossDomain: true,
+      beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Basic ' + btoa('ENV[CBIT_API]:'));},
+      dataType: 'JSON',
+      url: 'https://person-stream.clearbit.com/v2/combined/find?email=' + $('#email').val()
+
+      }).done(function(data){
+        console.log(data);
+      }).fail(function(data){
+        console.log('Person not found!');
+      });
   });
 
 });
