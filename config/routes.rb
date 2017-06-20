@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     get :autocomplete_user_email, :on => :collection
   end
 
+  get '/cbit/:email', to: 'users#get_user_info', as: 'get_user_info'
+
   resources :sessions, only: %i(create destroy)
 end
