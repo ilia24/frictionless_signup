@@ -53,6 +53,8 @@ group :production do
   gem 'pg'
 end
 
+gem 'foundation-rails'
+
 #this is an autocomplete gem for the email field
 gem 'rails-jquery-autocomplete'
 
