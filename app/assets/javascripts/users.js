@@ -4,6 +4,12 @@ $(document).on('turbolinks:load', function() {
     domains: ["fintros.com"] //additional domains
   });
 
+  function clearFields() {
+    $('#full_name').val("");
+    $('#company_name').val("");
+  };
+
+  //this is the internal rails Clearbit call for user info
   $("#email").focusout(function() {
     $.ajax({
       method: 'GET',
@@ -11,9 +17,11 @@ $(document).on('turbolinks:load', function() {
       url: '/cbit/' + $('#email').val()
 
       }).done(function(data){
-        $('#full_name').val(data.person.name.fullName)
-        $('#company_name').val(data.company.legalName)
+        clearFields();
+        $('#full_name').val(data.person.name.fullName);
+        $('#company_name').val(data.company.legalName);
       }).fail(function(){
+        clearFields();
         console.log('Person not found!');
       });
   });
