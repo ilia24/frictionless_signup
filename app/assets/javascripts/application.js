@@ -12,7 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-autocomplete
+
+//= require jquery.email-autocomplete
 //= require autocomplete-rails
 //= require turbolinks
 //= require_tree .
+
+$(document).on('turbolinks:load', function() {
+
+  $("#email").emailautocomplete({
+    suggClass: "custom-classname", //default: "eac-sugg". your custom classname (optional)
+    domains: ["fintros.com"] //additional domains (optional)
+  });
+
+});
