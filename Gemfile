@@ -54,6 +54,7 @@ group :production do
 end
 
 gem 'foundation-rails'
+gem 'clearbit'
 
 #this is an autocomplete gem for the email field
 gem 'rails-jquery-autocomplete'
