@@ -37,7 +37,7 @@ private
   end
 
   def clearbit_auth
-    Clearbit.key = ENV[CBIT_API]
+    Clearbit.key = ENV['CBIT_API']
   end
 
 end
