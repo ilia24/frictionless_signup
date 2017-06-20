@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-autocomplete
+//= require autocomplete-rails
 //= require turbolinks
 //= require_tree .
