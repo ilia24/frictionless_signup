@@ -49,6 +49,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :production do
+  gem 'pg'
+end
+
 #this is an autocomplete gem for the email field
 gem 'rails-jquery-autocomplete'
 
