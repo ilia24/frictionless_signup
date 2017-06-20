@@ -21,4 +21,4 @@ production:
   <<: *default
   adapter: postgresql
   host: localhost
-  database: <%= app_name %>_production
+  database: signup_production
