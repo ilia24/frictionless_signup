@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 
 //= require jquery.email-autocomplete
 //= require autocomplete-rails
 //= require turbolinks
 //= require_tree .
+
+$(function(){ $(document).foundation(); });

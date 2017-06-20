@@ -2,43 +2,51 @@
   <p>logged in</p>
   <%= link_to 'Log Out', session_path('current'), :method => :delete%>
 <% else %>
-  <p>Sign up!</p>
+<div class="form_container">
 
-  <%= form_for @user do |f| %>
+  <div class="title">
+      <p>Sample Signup form</p>
+  </div>
 
-    <p>
-    <%= f.label :email %><br>
-    <%= f.text_field :email, :id => 'email'%>
-    </p>
+  <div class="form">
+    <%= form_for @user do |f| %>
 
-    <p>
-      <%= f.label :full_name %><br>
-      <%= f.text_field :full_name, :id => 'full_name' %>
-    </p>
+      <p>
+      <%= f.label :email %><br>
+      <%= f.text_field :email, :id => 'email'%>
+      </p>
 
-    <p>
-      <%= f.label :company_name %><br>
-      <%= f.text_field :company_name, :id => 'company_name' %>
-    </p>
+      <p>
+        <%= f.label :full_name %><br>
+        <%= f.text_field :full_name, :id => 'full_name' %>
+      </p>
 
-    <p>
-      <%= f.label :company_size %><br>
-      <%= f.text_field :company_size %>
-    </p>
+      <p>
+        <%= f.label :company_name %><br>
+        <%= f.text_field :company_name, :id => 'company_name' %>
+      </p>
 
-    <p>
-      <%= f.label :phone_number %><br>
-      <%= f.text_field :phone_number %>
-    </p>
+      <p>
+        <%= f.label :company_size %><br>
+        <%= f.text_field :company_size %>
+      </p>
 
-    <p>
-      <%= f.label :password %><br>
-      <%= f.password_field :password %>
-    </p>
+      <p>
+        <%= f.label :phone_number %><br>
+        <%= f.text_field :phone_number %>
+      </p>
 
-    <p>
-      <%= f.submit %>
-    </p>
-  <% end %>
+      <p>
+        <%= f.label :password %><br>
+        <%= f.password_field :password %>
+      </p>
+
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>
+  </div>
+
+</div>
 
 <% end %>
