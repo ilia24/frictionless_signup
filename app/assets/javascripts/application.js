@@ -17,11 +17,3 @@
 //= require autocomplete-rails
 //= require turbolinks
 //= require_tree .
-
-$(document).on('turbolinks:load', function() {
-
-  $("#email").emailautocomplete({
-    domains: ["fintros.com"] //additional domains 
-  });
-
-});
