@@ -20,9 +20,11 @@ $(document).on('turbolinks:load', function() {
         clearFields();
         $('#full_name').val(data.person.name.fullName);
         $('#company_name').val(data.company.legalName);
+        $('.hiddenfields').removeClass( 'hide' );
       }).fail(function(){
         clearFields();
         console.log('Person not found!');
+        $('.hiddenfields').removeClass( 'hide' );
       });
   });
 

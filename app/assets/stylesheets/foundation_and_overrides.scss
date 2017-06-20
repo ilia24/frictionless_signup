@@ -2,7 +2,6 @@
 
 @import 'settings';
 @import 'foundation';
-@import 'users';
 
 // If you'd like to include motion-ui the foundation-rails gem comes prepackaged with it, uncomment the 3 @imports, if you are not using the gem you need to install the motion-ui sass package.
 //
@@ -12,9 +11,9 @@
 
 @include foundation-global-styles;
 // @include foundation-grid;
-// @include foundation-typography;
-// @include foundation-button;
-// @include foundation-forms;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
 // @include foundation-visibility-classes;
 // @include foundation-float-classes;
 // @include foundation-accordion;
@@ -52,3 +51,5 @@
 //
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
+
+@import 'users';
