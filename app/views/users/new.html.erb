@@ -11,39 +11,50 @@
   <div class="form">
     <%= form_for @user do |f| %>
 
-      <p>
-      <%= f.label :email %><br>
-      <%= f.text_field :email, :id => 'email'%>
-      </p>
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.label :email %><br>
+          <%= f.text_field :email, :id => 'email'%>
+        </div>
+      </div>
 
-      <p>
-        <%= f.label :full_name %><br>
-        <%= f.text_field :full_name, :id => 'full_name' %>
-      </p>
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.label :name %><br>
+          <%= f.text_field :full_name, :id => 'full_name' %>
+        </div>
+      </div>
 
-      <p>
-        <%= f.label :company_name %><br>
-        <%= f.text_field :company_name, :id => 'company_name' %>
-      </p>
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.label :company_name %><br>
+          <%= f.text_field :company_name, :id => 'company_name' %>
+        </div>
+      </div>
 
-      <p>
-        <%= f.label :company_size %><br>
-        <%= f.text_field :company_size %>
-      </p>
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.label :company_size %><br>
+          <%= f.text_field :company_size %>
+        </div>
+      </div>
 
-      <p>
-        <%= f.label :phone_number %><br>
-        <%= f.text_field :phone_number %>
-      </p>
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.label :phone_number %><br>
+          <%= f.text_field :phone_number %>
+        </div>
+      </div>
 
-      <p>
-        <%= f.label :password %><br>
-        <%= f.password_field :password %>
-      </p>
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.label :password %><br>
+          <%= f.password_field :password %>
+        </div>
+      </div>
 
-      <p>
-        <%= f.submit %>
-      </p>
+        <%= f.submit(:class => "button round") %>
+
     <% end %>
   </div>
 
