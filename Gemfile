@@ -49,8 +49,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-#this gem is for pulling info from ClearBit's API
-gem 'httparty'
+#this is an autocomplete gem for the email field
+gem 'rails-jquery-autocomplete'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
