@@ -21,8 +21,7 @@
 $(document).on('turbolinks:load', function() {
 
   $("#email").emailautocomplete({
-    suggClass: "custom-classname", //default: "eac-sugg". your custom classname (optional)
-    domains: ["fintros.com"] //additional domains (optional)
+    domains: ["fintros.com"] //additional domains 
   });
 
 });
