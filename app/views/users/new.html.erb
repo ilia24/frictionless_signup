@@ -1,6 +1,8 @@
 <% if current_user %>
-  <p>logged in</p>
-  <%= link_to 'Log Out', session_path('current'), :method => :delete%>
+  <div class="loggedin">
+    <p>Logged in</p>
+    <%= link_to 'Log Out', session_path('current'), :method => :delete%>
+  </div>
 <% else %>
 <div class="form_container">
 
