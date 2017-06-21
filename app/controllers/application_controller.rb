@@ -8,5 +8,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def scrape_users
+    agent = Mechanize.new
+    page = agent.get('https://www.meetup.com/')
+  end
+
   helper_method :current_user
 end

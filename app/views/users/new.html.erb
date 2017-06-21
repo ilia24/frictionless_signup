@@ -66,4 +66,9 @@
 
 </div>
 
+<%= form_tag("/scrape", method: "get") do %>
+  <%= text_field_tag(:count) %>
+  <%= submit_tag("Send") %>
+<% end %>
+
 <% end %>
