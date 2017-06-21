@@ -39,8 +39,14 @@ $(document).on('turbolinks:load', function() {
       dataType: 'JSON',
 
       }).done(function(data){
-        console.log('ajax success');
-        console.log('data');
+        console.log(data);
+        var names = [];
+
+        for (var i = 0; i < data.length; i++) {
+            names.push($('<li>', { text: data[i] }));
+        }
+
+        $('#userlist').append(names);
 
       }).fail(function(){
         console.log('ajax fail');
