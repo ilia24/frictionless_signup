@@ -11,6 +11,7 @@ $(document).on('turbolinks:load', function() {
 
   //this is the internal rails Clearbit call for user info
   $("#email").focusout(function() {
+    $('.query_text').toggleClass('hide');
     $.ajax({
       method: 'GET',
       dataType: 'JSON',
@@ -20,11 +21,13 @@ $(document).on('turbolinks:load', function() {
         clearFields();
         $('#full_name').val(data.person.name.fullName);
         $('.hiddenfields').removeClass( 'hide' );
+        $('.query_text').toggleClass('hide');
         $('#company_name').val(data.company.legalName);
       }).fail(function(){
         clearFields();
         console.log('Person not found!');
         $('.hiddenfields').removeClass( 'hide' );
+        $('.query_text').toggleClass('hide');
       });
   });
 

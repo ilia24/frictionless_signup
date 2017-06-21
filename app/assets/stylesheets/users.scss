@@ -63,3 +63,13 @@ body {
     font-weight: 700px;
   }
 }
+
+.query_text {
+  position: relative;
+  bottom: 99px;
+  left: 45px;
+}
+
+.query_text.hide {
+  display: none;
+}
