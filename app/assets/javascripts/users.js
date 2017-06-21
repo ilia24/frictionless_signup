@@ -39,12 +39,11 @@ $(document).on('turbolinks:load', function() {
       dataType: 'JSON',
 
       }).done(function(data){
-        console.log(data);
         var names = [];
 
         for (var i = 0; i < data.length; i++) {
             names.push($('<li>', { text: data[i] }));
-        }
+        };
 
         $('#userlist').append(names);
 
