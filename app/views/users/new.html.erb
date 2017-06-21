@@ -66,9 +66,12 @@
 
 </div>
 
-<%= form_tag scrape_info_url, method: "get", id: "scrape_form" do %>
-  <%= submit_tag("Scrape 100 Users from Meetup") %>
-<% end %>
+<div class="scrape_container">
+  <%= form_tag scrape_info_url, method: "get", id: "scrape_form" do %>
+    <%= submit_tag("Scrape 500 Users from Meetup", class: "button round") %>
+  <% end %>
+  <%= image_tag("/pageloader.gif", class: "loading_icon", height: '40', width: '40') %>
+</div>
 
 <ul id='userlist'>
 
