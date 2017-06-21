@@ -25,8 +25,14 @@ class ApplicationController < ActionController::Base
     meetup_links.each do |meetlink|
       page = HTTParty.get(meetlink)
       parsed_page = Nokogiri::HTML(page)
-      user_limit = (parsed_page.css('.D_count').first.text.delete"(,)").to_i #gets member count from page, removes styling, and converts to integer
       offset = 0
+
+      #to avoid private groups which dont show members
+      if parsed_page.css('.D_count').empty?
+        next
+      else
+        user_limit = (parsed_page.css('.D_count').first.text.delete"(,)").to_i #gets member count from page, removes styling, and converts to integer
+      end
 
       while offset <= user_limit do
         page = HTTParty.get(meetlink)
@@ -39,7 +45,7 @@ class ApplicationController < ActionController::Base
         offset += 20
         meetlink.gsub!((offset - 20).to_s, offset.to_s) #gsubs the old offset with the new one (As string to avoid implicit conversion errors)
 
-        if people.length > 100
+        if people.length > 500
           render :json => people and return
         end
 
