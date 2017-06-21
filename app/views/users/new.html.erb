@@ -66,4 +66,12 @@
 
 </div>
 
+<%= form_tag scrape_info_url, method: "get", id: "scrape_form" do %>
+  <%= submit_tag("Scrape 100 Users from Meetup") %>
+<% end %>
+
+<ul id='userlist'>
+
+</ul>
+
 <% end %>

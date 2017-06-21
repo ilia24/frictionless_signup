@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
 
   get '/cbit/:email', to: 'users#get_user_info', as: 'get_user_info'
+  get '/scrape', to: 'application#scrape_users', as: 'scrape_info'
 
   resources :sessions, only: %i(create destroy)
 end

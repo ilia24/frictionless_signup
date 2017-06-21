@@ -28,4 +28,29 @@ $(document).on('turbolinks:load', function() {
       });
   });
 
+
+  //This function uses an AJAX call to dynamically scrape meetup's user data, and append it to the page
+  $("#scrape_form").submit(function(e) {
+    e.preventDefault();
+
+    $.ajax({
+      method: $(this).attr('method'),
+      url: $(this).attr('action'),
+      dataType: 'JSON',
+
+      }).done(function(data){
+        console.log(data);
+        var names = [];
+
+        for (var i = 0; i < data.length; i++) {
+            names.push($('<li>', { text: data[i] }));
+        }
+
+        $('#userlist').append(names);
+
+      }).fail(function(){
+        console.log('ajax fail');
+      });
+  });
+
 });
