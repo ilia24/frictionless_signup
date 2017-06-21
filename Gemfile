@@ -55,6 +55,8 @@ end
 
 gem 'foundation-rails'
 gem 'clearbit'
+gem "httparty"
+gem 'mechanize'
 
 #this is an autocomplete gem for the email field
 gem 'rails-jquery-autocomplete'
