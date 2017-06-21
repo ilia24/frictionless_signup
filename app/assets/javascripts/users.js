@@ -31,6 +31,14 @@ $(document).on('turbolinks:load', function() {
       });
   });
 
+  //this prevents the user clicking enter on the initial email box to submit it
+  $('#email').keypress(function(event) {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+        $('#email').blur()
+    };
+});
+
 
   //This function uses an AJAX call to dynamically scrape meetup's user data, and append it to the page
   $("#scrape_form").submit(function(e) {
