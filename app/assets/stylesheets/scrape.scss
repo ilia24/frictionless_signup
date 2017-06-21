@@ -1,0 +1,16 @@
+.scrape_container {
+  width: 100%;
+}
+.scrape_form {
+  position:relative;
+}
+
+.loading_icon {
+  position: relative;
+  top: -52px;
+  left: 62%;
+}
+
+.loading_icon.hide {
+  display: none;
+}

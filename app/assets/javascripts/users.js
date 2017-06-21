@@ -32,6 +32,7 @@ $(document).on('turbolinks:load', function() {
   //This function uses an AJAX call to dynamically scrape meetup's user data, and append it to the page
   $("#scrape_form").submit(function(e) {
     e.preventDefault();
+    $('.loading_icon').toggleClass('hide');
 
     $.ajax({
       method: $(this).attr('method'),
@@ -39,6 +40,7 @@ $(document).on('turbolinks:load', function() {
       dataType: 'JSON',
 
       }).done(function(data){
+        $('.loading_icon').toggleClass('hide');
         var names = [];
 
         for (var i = 0; i < data.length; i++) {
@@ -49,6 +51,7 @@ $(document).on('turbolinks:load', function() {
 
       }).fail(function(){
         console.log('ajax fail');
+        $('.loading_icon').toggleClass('hide');
       });
   });
 
