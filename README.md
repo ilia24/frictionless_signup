@@ -1,24 +1,5 @@
-# README
+# Frictionless signup & Web scraper
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The frictionless signup was built using Cbit's rails gem allowing authentication to be done server side.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The scraper uses httparty to pull pages, Nokogiri for page parsing and Mechanize for automation!
